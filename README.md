@@ -21,7 +21,7 @@ File name	Purpose
 logic_gates.v	Logic-gate RTL
 logic_gates_tb.v	All
 input combinations and VCD generation
- # Verilog  Progra
+ # Verilog  Program
  ```
  mmodule basic_gates (
     input  wire a,
