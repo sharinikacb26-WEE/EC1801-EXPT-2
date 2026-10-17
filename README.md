@@ -19,15 +19,43 @@ Logic gates are the basic building blocks of digital systems. NAND and NOR are u
 # Files to be Created
 File name	Purpose
 logic_gates.v	Logic-gate RTL
-logic_gates_tb.v	All input combinations and VCD generation
- # Verilog  Program
+logic_gates_tb.v	All
+input combinations and VCD generation
+ # Verilog  Progra
+ ```
+ mmodule basic_gates (
+    input  wire a,
+    input  wire b,
+    output wire y_and,
+    output wire y_or,
+    output wire y_not
+);
+
+    assign y_and = a & b;   // AND gate
+    assign y_or  = a | b;   // OR gate
+    assign y_not = ~a;      // NOT gate (inverter)
+
+endmodule
+```
+ 
+ 
 
 # **Test Bench Program**
+```
+module basic_gates (
+    input  wire a,
+    input  wire b,
+    output wire y_and,
+    output wire y_or,
+    output wire y_not
+);
 
+    assign y_and = a & b;   // AND gate
+    assign y_or  = a | b;   // OR gate
+    assign y_not = ~a;      // NOT gate (inverter)
 
-
-
- 
+endmodule
+```
 <img width="940" height="318" alt="image" src="https://github.com/user-attachments/assets/8a343bdb-ffb4-4aac-8b88-cf59eca374a8" />
 
 # Simulation Procedure
@@ -56,6 +84,8 @@ dve -full64 &
 A DVE environment will open.
 
 DVE Waveform Verification
+<img width="1920" height="1080" alt="Screenshot (39)" src="https://github.com/user-attachments/assets/c97bddaa-ded1-4fea-8802-bb584dd3a0df" />
+
 In DVE:
 Open the testbench hierarchy.
 Locate the signals: 
